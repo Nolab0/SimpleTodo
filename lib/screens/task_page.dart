@@ -21,6 +21,7 @@ class _task_addState extends State<task_add> {
   FocusNode _title_focus;
   FocusNode _desc_focus;
   bool content_visibilty = false;
+  bool task_add = true; //true if a new task, false otherwise
 
   @override
   void initState() {
@@ -32,8 +33,10 @@ class _task_addState extends State<task_add> {
       task_is_done = widget.task.is_done;
       //set visibility to true
       content_visibilty = true;
+      task_add = false;
     } else {
       task_is_done = 0;
+      task_add = true;
     }
     _title_focus = FocusNode();
     _desc_focus = FocusNode();
@@ -133,7 +136,7 @@ class _task_addState extends State<task_add> {
                   ],
                 ),
                 Visibility(
-                  visible: content_visibilty,
+                  visible: !task_add,
                   child: Positioned(
                       bottom: 18,
                       left: 20,
