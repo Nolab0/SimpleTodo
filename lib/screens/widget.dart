@@ -26,9 +26,10 @@ class task_card extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight:
-                        is_done == 1 ? FontWeight.w500 : FontWeight.bold,
+                        is_done == 1 ? FontWeight.w200 : FontWeight.bold,
                     decoration:
-                        is_done == 1 ? TextDecoration.lineThrough : null),
+                        is_done == 1 ? TextDecoration.lineThrough : null,
+                    color: is_done == 1 ? Colors.black54 : Colors.black),
               ),
             ),
             Text(description ?? "(No description)")
