@@ -1,6 +1,6 @@
 # test_features
 
-A new Flutter project.
+Mobile application managaging ToDo developed with Flutter sdk
 
 ## Getting Started
 
